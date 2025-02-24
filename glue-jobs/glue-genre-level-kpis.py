@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions *
+from pyspark.sql.functions import *
 from pyspark.sql.window import Window
 
 spark = SparkSession.builder \
@@ -7,7 +7,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Define S3 bucket and file paths
-bucket_name = 'music-streams-aws-dataengineering-batch-project'
+bucket_name = 'music-streams-data-engineering-batch-project'
 songs_file_path = f's3a://{bucket_name}/music_streams/songs/'
 users_file_path = f's3a://{bucket_name}/music_streams/users/'
 user_streams_path = f's3a://{bucket_name}/music_streams/user-streams/'
